@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
-import { Group } from '@vx/group'
+import React, { Fragment } from "react";
+import { Group } from "@vx/group";
+import { ParentSize } from "@vx/responsive";
 
-import Node from './Node'
-import { getTopLeft } from './utils'
+import Node from "./Node";
+import { getTopLeft } from "./utils";
 
 function Nodes({ nodes, layout, orientation, onNodeClick }) {
   return (
@@ -18,7 +19,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         </Group>
       ))}
     </Fragment>
-  )
+  );
 }
 
-export default Nodes
+export default Nodes;

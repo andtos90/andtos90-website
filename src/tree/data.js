@@ -37,10 +37,11 @@ export default {
         }
       ]
     },
-    { name: "Work" },
-    { name: "Teaching" },
+    { name: "Work", img: educationImg },
+    { name: "Teaching", img: educationImg },
     {
       name: "Free time",
+      img: educationImg,
       children: [{ name: "B1" }, { name: "B2" }, { name: "B3" }]
     }
   ]

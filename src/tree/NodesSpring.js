@@ -65,7 +65,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
                 v => (v < 0.5 ? "none" : "all")
               )
             }}
-            width={40}
+            width={100}
             height={20}
             opacity={styles.opacity}
             transform={interpolate(

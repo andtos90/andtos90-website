@@ -3,8 +3,11 @@ import { Group } from "@vx/group";
 import { Tree } from "@vx/hierarchy";
 import { LinearGradient } from "@vx/gradient";
 import { hierarchy } from "d3-hierarchy";
+
 import Links from "./LinksMove";
 import Nodes from "./NodesSpring";
+
+import contexts from "../contexts";
 
 export default class extends React.Component {
   state = {
@@ -14,11 +17,9 @@ export default class extends React.Component {
     stepPercent: 0.5
   };
 
-  render() {
+  _renderTree = size => {
     const {
       data,
-      width,
-      height,
       margin = {
         top: 100,
         left: 100,
@@ -26,6 +27,8 @@ export default class extends React.Component {
         bottom: 100
       }
     } = this.props;
+
+    const { width, height } = size;
     const { layout, orientation, linkType, stepPercent } = this.state;
 
     if (width < 10) return null;
@@ -80,6 +83,14 @@ export default class extends React.Component {
           </Tree>
         </svg>
       </div>
+    );
+  };
+
+  render() {
+    return (
+      <contexts.TreeSize.Consumer>
+        {context => this._renderTree(context)}
+      </contexts.TreeSize.Consumer>
     );
   }
 }
