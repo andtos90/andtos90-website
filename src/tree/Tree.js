@@ -20,10 +20,10 @@ export default class extends React.Component {
       width,
       height,
       margin = {
-        top: 30,
-        left: 30,
-        right: 30,
-        bottom: 30
+        top: 100,
+        left: 100,
+        right: 100,
+        bottom: 100
       }
     } = this.props;
     const { layout, orientation, linkType, stepPercent } = this.state;
@@ -41,6 +41,11 @@ export default class extends React.Component {
       <div>
         <svg width={width} height={height}>
           <LinearGradient id="lg" from="#fd9b93" to="#fe6e9e" />
+          <defs>
+            <clipPath id="myClip">
+              <circle r={100} />
+            </clipPath>
+          </defs>
           <Tree
             top={margin.top}
             left={margin.left}

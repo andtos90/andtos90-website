@@ -1,5 +1,5 @@
 {
-  "name": "react-spring-onleave-bug",
+  "name": "andtos90-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,12 +8,13 @@
     "@vx/hierarchy": "0.0.161",
     "@vx/responsive": "0.0.161",
     "@vx/shape": "0.0.162",
+    "@vx/text": "0.0.161",
     "classnames": "2.2.5",
     "d3-hierarchy": "1.1.6",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
-    "react-spring": "5.1.0"
+    "react-spring": "5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

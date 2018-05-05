@@ -1,40 +1,47 @@
+import profileImg from "../images/profile.jpg";
+import educationImg from "../images/education.jpg";
+
 export default {
-  name: 'T',
+  name: "Me",
+  img: profileImg,
+  isExpanded: true,
   children: [
     {
-      name: 'A',
+      name: "Education",
+      img: educationImg,
       children: [
-        { name: 'A1' },
-        { name: 'A2' },
-        { name: 'A3' },
+        { name: "A1" },
+        { name: "A2" },
+        { name: "A3" },
         {
-          name: 'C',
+          name: "C",
           children: [
             {
-              name: 'C1',
+              name: "C1"
             },
             {
-              name: 'D',
+              name: "D",
               children: [
                 {
-                  name: 'D1',
+                  name: "D1"
                 },
                 {
-                  name: 'D2',
+                  name: "D2"
                 },
                 {
-                  name: 'D3',
-                },
-              ],
-            },
-          ],
-        },
-      ],
+                  name: "D3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    { name: 'Z' },
+    { name: "Work" },
+    { name: "Teaching" },
     {
-      name: 'B',
-      children: [{ name: 'B1' }, { name: 'B2' }, { name: 'B3' }],
-    },
-  ],
-}
+      name: "Free time",
+      children: [{ name: "B1" }, { name: "B2" }, { name: "B3" }]
+    }
+  ]
+};
