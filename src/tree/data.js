@@ -4,7 +4,6 @@ import educationImg from "../images/education.jpg";
 export default {
   name: "Me",
   img: profileImg,
-  isExpanded: true,
   children: [
     {
       name: "Education",

@@ -47,7 +47,7 @@ const Node = ({ node, onClick }) => {
     <Fragment>
       {node.depth === 0 && <RootNode {...{ node, onClick, width, height }} />}
       {node.depth !== 0 && (
-        <SectionNode {...{ node, onClick, width, height }} />
+        <SectionNode {...{ node, onClick, width: 400, height: 80 }} />
       )}
       <Text style={{ pointerEvents: "none" }} width={width} scaleToFit={false}>
         {node.data.name}

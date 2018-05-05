@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 import { Group } from "@vx/group";
 import { Tree } from "@vx/hierarchy";
 import { LinearGradient } from "@vx/gradient";
@@ -38,7 +39,17 @@ export default class extends React.Component {
     const origin = { x: 0, y: 0 };
     const sizeWidth = innerHeight;
     const sizeHeight = innerWidth;
-    const root = hierarchy(data, d => (d.isExpanded ? d.children : null));
+
+    const root = hierarchy(data, d => {
+      // the node is not expanded, childrens will not be rendered
+      if (!d.isExpanded) return null;
+
+      const hasExpandedChildren = !!_.find(d.children, "isExpanded");
+      // none of the children is expanded, all the childrens will be rendered
+      if (!hasExpandedChildren) return d.children;
+      // at least one of the children is expanded, only the expanded childrens will be rendered
+      return d.children.filter(c => c.isExpanded);
+    });
 
     return (
       <div>
@@ -54,7 +65,7 @@ export default class extends React.Component {
             left={margin.left}
             root={root}
             size={[sizeWidth, sizeHeight]}
-            separation={(a, b) => (a.parent == b.parent ? 1 : 0.5) / a.depth}
+            separation={(a, b) => (a.parent === b.parent ? 1 : 0.5) / a.depth}
           >
             {({ data }) => (
               <Group top={origin.y} left={origin.x}>
