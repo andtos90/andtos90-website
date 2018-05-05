@@ -1,57 +1,61 @@
 import React, { Fragment } from "react";
+import { Group } from "@vx/group";
 import { Text } from "@vx/text";
 
-const RootNode = ({ node, onClick, width, height }) => {
+const RootNode = ({ node, onClick }) => {
+  const width = node.data.isExpanded ? 200 : 400;
+  const height = node.data.isExpanded ? 100 : 200;
   return (
-    <image
-      href={node.data.img}
-      width={width}
-      height={height}
-      y={-height / 2}
-      x={-width / 2}
-      onClick={onClick}
-      clipPath="url(#myClip)"
-    />
+    <Fragment>
+      <image
+        href={node.data.img}
+        width={width}
+        height={height}
+        y={-height / 2}
+        x={-width / 2}
+        onClick={onClick}
+        clipPath="url(#myClip)"
+      />
+      <Text style={{ pointerEvents: "none" }} width={width} scaleToFit={false}>
+        {node.data.name}
+      </Text>
+    </Fragment>
   );
 };
 
-const SectionNode = ({ node, onClick, width, height }) => {
-  /*<rect
-          height={height / 2}
-          width={width / 2}
-          y={-height / 4}
-          x={-width / 4}
-          stroke={node.data.children ? "#03c0dc" : "#26deb0"}
-          strokeWidth={1}
-          strokeDasharray={!node.data.children ? "2,2" : "0"}
-          strokeOpacity={!node.data.children ? 0.6 : 1}
-          rx={!node.data.children ? 10 : 0}
-          onClick={onClick}
-        />*/
+const SectionNode = ({ node, onClick }) => {
+  const width = node.data.isExpanded ? 50 : 200;
+  const height = node.data.isExpanded ? 20 : 40;
   return (
-    <image
-      href={node.data.img}
-      width={width}
-      height={height}
-      y={-height / 2}
-      x={-width / 2}
-      onClick={onClick}
-    />
+    <Group top={-height / 2} left={-width / 2}>
+      <image
+        href={node.data.img}
+        width={width}
+        height={height}
+        onClick={onClick}
+        preserveAspectRatio={"xMidYMid slice"}
+      />
+      <Text
+        style={{ pointerEvents: "none" }}
+        width={width}
+        height={height}
+        dy={height / 2}
+        dx={width / 2}
+        textAnchor={"middle"}
+        verticalAnchor={"middle"}
+        scaleToFit={false}
+      >
+        {node.data.name}
+      </Text>
+    </Group>
   );
 };
 
 const Node = ({ node, onClick }) => {
-  const width = 400;
-  const height = 200;
   return (
     <Fragment>
-      {node.depth === 0 && <RootNode {...{ node, onClick, width, height }} />}
-      {node.depth !== 0 && (
-        <SectionNode {...{ node, onClick, width: 400, height: 80 }} />
-      )}
-      <Text style={{ pointerEvents: "none" }} width={width} scaleToFit={false}>
-        {node.data.name}
-      </Text>
+      {node.depth === 0 && <RootNode {...{ node, onClick }} />}
+      {node.depth !== 0 && <SectionNode {...{ node, onClick }} />}
     </Fragment>
   );
 };

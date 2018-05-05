@@ -13,7 +13,7 @@ import contexts from "../contexts";
 export default class extends React.Component {
   state = {
     layout: "cartesian",
-    orientation: "horizontal",
+    orientation: "vertical",
     linkType: "diagonal",
     stepPercent: 0.5
   };
@@ -37,8 +37,16 @@ export default class extends React.Component {
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
     const origin = { x: 0, y: 0 };
-    const sizeWidth = innerHeight;
-    const sizeHeight = innerWidth;
+
+    let sizeWidth = innerHeight;
+    let sizeHeight = innerWidth;
+    if (orientation === "horizontal") {
+      sizeWidth = innerHeight;
+      sizeHeight = innerWidth;
+    } else {
+      sizeWidth = innerWidth;
+      sizeHeight = innerHeight;
+    }
 
     const root = hierarchy(data, d => {
       // the node is not expanded, childrens will not be rendered
@@ -81,11 +89,17 @@ export default class extends React.Component {
                   layout={layout}
                   orientation={orientation}
                   onNodeClick={node => {
-                    if (!node.data.isExpanded) {
+                    if (
+                      !node.data.isExpanded &&
+                      node.data.children &&
+                      node.data.children.length > 0
+                    ) {
                       node.data.x0 = node.x;
                       node.data.y0 = node.y;
+                      node.data.isExpanded = true;
+                    } else if (node.data.isExpanded) {
+                      node.data.isExpanded = false;
                     }
-                    node.data.isExpanded = !node.data.isExpanded;
                     this.forceUpdate();
                   }}
                 />

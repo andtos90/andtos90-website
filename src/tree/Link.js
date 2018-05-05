@@ -1,9 +1,10 @@
-import React from 'react'
-import { LinkHorizontal } from '@vx/shape'
+import React from "react";
+import { LinkHorizontal, LinkVertical } from "@vx/shape";
 
 function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
+  const Link = orientation === "horizontal" ? LinkHorizontal : LinkVertical;
   return (
-    <LinkHorizontal
+    <Link
       data={data}
       percent={stepPercent}
       stroke="#374469"
@@ -11,7 +12,7 @@ function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
       fill="none"
       {...props}
     />
-  )
+  );
 }
 
-export default Link
+export default Link;

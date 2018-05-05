@@ -9,8 +9,17 @@ export function findCollapsedParent(node) {
 }
 
 export function getTopLeft(node, layout, orientation) {
+  let top;
+  let left;
+  if (orientation === "vertical") {
+    top = node.y;
+    left = node.x;
+  } else {
+    top = node.x;
+    left = node.y;
+  }
   return {
-    top: node.x,
-    left: node.y
+    top,
+    left
   };
 }
