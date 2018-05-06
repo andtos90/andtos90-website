@@ -30,12 +30,20 @@ function Links({ links, linkType, layout, orientation, stepPercent }) {
           ty: target.y
         })}
         leave={({ source, target }) => {
-          const collapsedParent = findCollapsedParent(source);
+          let x = 0,
+            y = 0;
+          if (source != null) {
+            const collapsedParent = findCollapsedParent(source);
+            if (collapsedParent != null) {
+              x = collapsedParent.data.x0;
+              y = collapsedParent.data.y0;
+            }
+          }
           return {
-            sx: collapsedParent.data.x0,
-            sy: collapsedParent.data.y0,
-            tx: collapsedParent.data.x0,
-            ty: collapsedParent.data.y0
+            sx: x,
+            sy: y,
+            tx: x,
+            ty: y
           };
         }}
       >

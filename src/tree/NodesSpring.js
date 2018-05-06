@@ -41,15 +41,28 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         };
       }}
       leave={node => {
-        const collapsedParent = findCollapsedParent(node.parent);
-        const collapsedParentPrevPos = {
-          x: collapsedParent.data.x0,
-          y: collapsedParent.data.y0
-        };
-        const topLeft = getTopLeft(collapsedParentPrevPos, layout, orientation);
+        let top = 0,
+          left = 0;
+        if (node != null) {
+          const collapsedParent = findCollapsedParent(node.parent);
+          if (collapsedParent) {
+            const collapsedParentPrevPos = {
+              x: collapsedParent.data.x0,
+              y: collapsedParent.data.y0
+            };
+            const topLeft = getTopLeft(
+              collapsedParentPrevPos,
+              layout,
+              orientation
+            );
+            top = topLeft.top;
+            left = topLeft.left;
+          }
+        }
+
         return {
-          top: topLeft.top,
-          left: topLeft.left,
+          top,
+          left,
           opacity: 0
         };
       }}

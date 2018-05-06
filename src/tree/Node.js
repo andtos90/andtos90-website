@@ -3,8 +3,8 @@ import { Group } from "@vx/group";
 import { Text } from "@vx/text";
 
 const RootNode = ({ node, onClick }) => {
-  const width = node.data.isExpanded ? 200 : 400;
-  const height = node.data.isExpanded ? 100 : 200;
+  const height = node.data.isExpanded ? 50 : 100;
+  const width = node.data.isExpanded ? 50 : 100;
   return (
     <Fragment>
       <image
@@ -14,9 +14,17 @@ const RootNode = ({ node, onClick }) => {
         y={-height / 2}
         x={-width / 2}
         onClick={onClick}
+        preserveAspectRatio={"xMidYMid slice"}
         clipPath="url(#myClip)"
       />
-      <Text style={{ pointerEvents: "none" }} width={width} scaleToFit={false}>
+      <Text
+        x={width / 2}
+        className={"Node-text"}
+        fill={"white"}
+        style={{ pointerEvents: "none" }}
+        width={width}
+        scaleToFit={false}
+      >
         {node.data.name}
       </Text>
     </Fragment>
@@ -24,8 +32,8 @@ const RootNode = ({ node, onClick }) => {
 };
 
 const SectionNode = ({ node, onClick }) => {
-  const width = node.data.isExpanded ? 50 : 200;
-  const height = node.data.isExpanded ? 20 : 40;
+  const height = node.data.isExpanded ? 50 : 50;
+  const width = node.data.isExpanded ? 200 : 50;
   return (
     <Group top={-height / 2} left={-width / 2}>
       <image
@@ -36,6 +44,8 @@ const SectionNode = ({ node, onClick }) => {
         preserveAspectRatio={"xMidYMid slice"}
       />
       <Text
+        className={"Node-text"}
+        fill={"white"}
         style={{ pointerEvents: "none" }}
         width={width}
         height={height}

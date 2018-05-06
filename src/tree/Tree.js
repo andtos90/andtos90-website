@@ -15,17 +15,18 @@ export default class extends React.Component {
     layout: "cartesian",
     orientation: "vertical",
     linkType: "diagonal",
-    stepPercent: 0.5
+    stepPercent: 0.5,
+    lastExpanded: ""
   };
 
   _renderTree = size => {
     const {
       data,
       margin = {
-        top: 100,
-        left: 100,
-        right: 100,
-        bottom: 100
+        top: 50,
+        left: 20,
+        right: 20,
+        bottom: 20
       }
     } = this.props;
 
@@ -48,7 +49,26 @@ export default class extends React.Component {
       sizeHeight = innerHeight;
     }
 
-    const root = hierarchy(data, d => {
+    // Current depth
+    const depth = this.state.lastExpanded
+      ? this.state.lastExpanded.split("_").length - 1
+      : 0;
+
+    const treeMaxHeight = 3;
+
+    let rootNode = data;
+    for (
+      let currentDepth = 1;
+      currentDepth < depth - treeMaxHeight + 2;
+      currentDepth++
+    ) {
+      const rootKey = this.state.lastExpanded.slice(0, (currentDepth + 1) * 2);
+      rootNode = _.find(rootNode.children, {
+        key: rootKey
+      });
+    }
+
+    const root = hierarchy(rootNode, d => {
       // the node is not expanded, childrens will not be rendered
       if (!d.isExpanded) return null;
 
@@ -97,9 +117,14 @@ export default class extends React.Component {
                       node.data.x0 = node.x;
                       node.data.y0 = node.y;
                       node.data.isExpanded = true;
+                      this.setState({ lastExpanded: node.data.key });
                     } else if (node.data.isExpanded) {
                       node.data.isExpanded = false;
+                      // TlastExpanded node key is the selected node parent
+                      let lastExpanded = node.data.key.slice(0, -2);
+                      this.setState({ lastExpanded });
                     }
+
                     this.forceUpdate();
                   }}
                 />
