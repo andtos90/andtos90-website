@@ -32,8 +32,9 @@ const RootNode = ({ node, onClick }) => {
 };
 
 const SectionNode = ({ node, onClick }) => {
-  const height = node.data.isExpanded ? 50 : 50;
-  const width = node.data.isExpanded ? 200 : 50;
+  const isExpanded = node.data.isExpanded;
+  const height = isExpanded ? 50 : 50;
+  const width = isExpanded ? 200 : 50;
   return (
     <Group top={-height / 2} left={-width / 2}>
       <image
@@ -43,20 +44,43 @@ const SectionNode = ({ node, onClick }) => {
         onClick={onClick}
         preserveAspectRatio={"xMidYMid slice"}
       />
-      <Text
-        className={"Node-text"}
-        fill={"white"}
-        style={{ pointerEvents: "none" }}
+      <rect
         width={width}
         height={height}
-        dy={height / 2}
-        dx={width / 2}
-        textAnchor={"middle"}
-        verticalAnchor={"middle"}
-        scaleToFit={false}
-      >
-        {node.data.name}
-      </Text>
+        fill={"white"}
+        style={{ opacity: 0.5, pointerEvents: "none" }}
+      />
+      {isExpanded ? (
+        <Text
+          className={"Node-text"}
+          fill={"black"}
+          style={{ pointerEvents: "none" }}
+          width={width}
+          height={height}
+          dy={height / 2}
+          dx={width / 2}
+          textAnchor={"middle"}
+          verticalAnchor={"middle"}
+          scaleToFit={false}
+        >
+          {node.data.name}
+        </Text>
+      ) : (
+        <Text
+          className={"Node-text"}
+          fill={"black"}
+          style={{ pointerEvents: "none" }}
+          width={width}
+          height={height}
+          dy={height / 2}
+          dx={width / 2}
+          textAnchor={"middle"}
+          verticalAnchor={"middle"}
+          scaleToFit={false}
+        >
+          a
+        </Text>
+      )}
     </Group>
   );
 };

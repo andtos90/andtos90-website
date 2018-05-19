@@ -92,7 +92,7 @@ export default class extends React.Component {
             top={margin.top}
             left={margin.left}
             root={root}
-            size={[sizeWidth, sizeHeight]}
+            size={[sizeWidth, root.height <= 1 ? sizeHeight / 2 : sizeHeight]}
             separation={(a, b) => (a.parent === b.parent ? 1 : 0.5) / a.depth}
           >
             {({ data }) => (
@@ -120,7 +120,7 @@ export default class extends React.Component {
                       this.setState({ lastExpanded: node.data.key });
                     } else if (node.data.isExpanded) {
                       node.data.isExpanded = false;
-                      // TlastExpanded node key is the selected node parent
+                      // lastExpanded node key is the selected node parent
                       let lastExpanded = node.data.key.slice(0, -2);
                       this.setState({ lastExpanded });
                     }
