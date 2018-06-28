@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-
-import "./App.css";
+import Tree from "./tree/index.js";
 
 class App extends Component {
   render() {
     return (
-      <div className={"App-container"}>
-        <h1>WIP</h1>
+      <div style={{ width: "300px", height: "500px" }}>
+        <Tree />
       </div>
     );
   }

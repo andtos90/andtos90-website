@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "react-scripts build && aws s3 sync build/ s3://andtos90-website",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
