@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "react-static start",
-    "stage": "react-static build --staging",
+    "stage": "react-static build --staging && yarn serve",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy": "react-static build && aws s3 sync build/ s3://www.andtos90.it",
+    "flow": "flow"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -16,12 +18,27 @@
     "react-dom": "^16.0.0",
     "react-emotion": "^9.2.4",
     "react-router": "^4.2.0",
-    "react-static": "true5.9.12"
+    "react-static": "5.9.12"
   },
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.4",
     "emotion-server": "^9.2.4",
     "eslint-config-react-tools": "1.x.x",
+    "flow-bin": "0.82.0",
+    "husky": "1.1.1",
+    "lint-staged": "7.3.0",
+    "prettier": "1.14.3",
     "serve": "^6.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

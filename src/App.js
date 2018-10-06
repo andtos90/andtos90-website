@@ -1,9 +1,10 @@
-import React from 'react'
-import { Router, Link } from 'react-static'
-import styled, { injectGlobal } from 'react-emotion'
-import { hot } from 'react-hot-loader'
-//
-import Routes from 'react-static-routes'
+import React from "react";
+import { Router, Link } from "react-static";
+import styled, { injectGlobal } from "react-emotion";
+import { hot } from "react-hot-loader";
+import Routes from "react-static-routes";
+
+import colors from "./config/colors";
 
 injectGlobal`
   body {
@@ -14,18 +15,18 @@ injectGlobal`
     margin: 0;
     padding: 0;
   }
-`
+`;
 
 const AppStyles = styled.div`
   a {
     text-decoration: none;
-    color: #108db8;
+    color: ${colors.PRIMARY};
     font-weight: bold;
   }
 
   nav {
     width: 100%;
-    background: #108db8;
+    background: ${colors.PRIMARY};
 
     a {
       color: white;
@@ -41,7 +42,7 @@ const AppStyles = styled.div`
   img {
     max-width: 100%;
   }
-`
+`;
 
 const App = () => (
   <Router>
@@ -51,13 +52,13 @@ const App = () => (
           Home
         </Link>
         <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
+        <Link to="/work">Work</Link>
       </nav>
       <div className="content">
         <Routes />
       </div>
     </AppStyles>
   </Router>
-)
+);
 
-export default hot(module)(App)
+export default hot(module)(App);

@@ -1,11 +1,9 @@
-import React from 'react'
-import { withSiteData } from 'react-static'
-//
-import logoImg from '../logo.png'
+/* @flow */
+import React from "react";
+import { withSiteData } from "react-static";
 
 export default withSiteData(() => (
   <div>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-    <img src={logoImg} alt="" style={{ display: 'block', margin: '0 auto' }} />
+    <h1 style={{ textAlign: "center" }}>WIP</h1>
   </div>
-))
+));

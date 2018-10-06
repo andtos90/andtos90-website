@@ -2,14 +2,18 @@ import axios from "axios";
 import React, { Component } from "react";
 import { renderStylesToString } from "emotion-server";
 
+import data from "./src/data";
+import keys from "./src/config/keys";
+
 export default {
+  // React is used in dev mode, rember to test the staging env
+  preact: true,
   getSiteData: () => ({
-    title: "React Static"
+    title: "Andrea Tosatto",
+    lastBuilt: Date.now()
   }),
+  siteRoot: `${keys.WEBSITE_PROTOCOL}://${keys.WEBSITE_PATH}`,
   getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
     return [
       {
         path: "/",
@@ -20,18 +24,20 @@ export default {
         component: "src/containers/About"
       },
       {
-        path: "/blog",
-        component: "src/containers/Blog",
+        path: "/work",
+        component: "src/containers/Work",
         getData: () => ({
-          posts
+          entries: data.workData
         }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: "src/containers/Post",
-          getData: () => ({
-            post
-          })
-        }))
+        children: data.workData.map(w => {
+          return {
+            path: `${w.id}`,
+            component: "src/containers/WorkDetail",
+            getData: () => ({
+              entry: w
+            })
+          };
+        })
       },
       {
         is404: true,
