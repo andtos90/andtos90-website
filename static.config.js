@@ -19,7 +19,7 @@ export default {
         path: "/",
         component: "src/containers/Home"
       },
-      {
+      /*{
         path: "/about",
         component: "src/containers/About"
       },
@@ -38,7 +38,7 @@ export default {
             })
           };
         })
-      },
+      },*/
       {
         is404: true,
         component: "src/containers/404"

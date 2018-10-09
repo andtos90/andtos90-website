@@ -14,29 +14,37 @@ injectGlobal`
     font-size: 16px;
     margin: 0;
     padding: 0;
+    background-color: ${colors.BACKGROUND};
+    color: ${colors.TEXT};
+    min-width: 300px;
+  }
+
+  a {
+    color: ${colors.SECONDARY};
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: ${colors.TEXT};
+    font-weight: bold;
+  }
+
+  h1, h2, h3 {
+    color: ${colors.SECONDARY};
   }
 `;
 
 const AppStyles = styled.div`
-  a {
-    text-decoration: none;
-    color: ${colors.PRIMARY};
-    font-weight: bold;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 
   nav {
-    width: 100%;
-    background: ${colors.PRIMARY};
-
+    display: flex;
+    flex-direction: row;
+    background: ${colors.BACKGROUND};
     a {
-      color: white;
       padding: 1rem;
       display: inline-block;
     }
-  }
-
-  .content {
-    padding: 1rem;
   }
 
   img {
@@ -47,16 +55,15 @@ const AppStyles = styled.div`
 const App = () => (
   <Router>
     <AppStyles>
-      <nav>
+      {/*<nav>
         <Link exact to="/">
           Home
         </Link>
         <Link to="/about">About</Link>
         <Link to="/work">Work</Link>
-      </nav>
-      <div className="content">
-        <Routes />
-      </div>
+      </nav>*/}
+
+      <Routes />
     </AppStyles>
   </Router>
 );

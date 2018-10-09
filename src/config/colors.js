@@ -1,6 +1,7 @@
 /* @flow */
 export default {
-  PRIMARY: "black",
-  COMPLEMENTARY: "white",
-  TEXT: "white"
+  PRIMARY: "white",
+  SECONDARY: "#C74939",
+  TEXT: "white",
+  BACKGROUND: "#0b0c10"
 };
