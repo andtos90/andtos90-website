@@ -17,6 +17,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-emotion": "^9.2.4",
+    "react-markdown": "4.0.3",
     "react-router": "^4.2.0",
     "react-static": "5.9.12"
   },

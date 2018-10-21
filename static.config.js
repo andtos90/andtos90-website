@@ -19,6 +19,11 @@ export default {
         path: "/",
         component: "src/containers/Home"
       },
+      {
+        /* It's still hidden in navigation menu */
+        path: "/resume",
+        component: "src/containers/Resume"
+      },
       /*{
         path: "/about",
         component: "src/containers/About"
@@ -64,5 +69,13 @@ export default {
         </Html>
       );
     }
+  },
+  webpack: config => {
+    config.module.rules[0].oneOf.unshift({
+      test: /\.md$/,
+      use: "raw-loader"
+    });
+
+    return config;
   }
 };

@@ -1,9 +1,15 @@
+sudo: required
+
 language: node_js
 node_js:
 - stable
-cache:
-  directories:
-  - node_modules
+
+services:
+  - docker
+
+before_script:
+- docker run -v ${PWD}:/resume there4/markdown-resume md2resume pdf ./src/data/resume.md ./public/ --template readable
+
 script:
 - yarn build
 deploy:
