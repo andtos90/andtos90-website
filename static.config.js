@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { Component } from "react";
 import { renderStylesToString } from "emotion-server";
+import { markdown } from "markdown";
+
+const marked = require("marked");
 
 import data from "./src/data";
 import keys from "./src/config/keys";
@@ -18,6 +21,11 @@ export default {
       {
         path: "/",
         component: "src/containers/Home"
+      },
+      {
+        /* It's still hidden in navigation menu */
+        path: "/resume",
+        component: "src/containers/Resume"
       },
       /*{
         path: "/about",
@@ -64,5 +72,13 @@ export default {
         </Html>
       );
     }
+  },
+  webpack: config => {
+    config.module.rules[0].oneOf.unshift({
+      test: /\.md$/,
+      use: "raw-loader"
+    });
+
+    return config;
   }
 };
