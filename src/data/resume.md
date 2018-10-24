@@ -1,8 +1,10 @@
 # Andrea Tosatto
 
-## Mentor at Coderdojo Padova, Software Developer at Mostaza
+### Software Developer at Mostaza
 
-## [Download PDF](https://andtos90.it/resume.pdf)
+##### Teacher at Talentlab, Mentor at Coderdojo Padova
+
+[Download as PDF](https://andtos90.it/resume.pdf) | [Github](https://github.com/andtos90) | [Linkedin](https://www.linkedin.com/in/tosattoandrea) | [Website](https://andtos90.it/)
 
 ### Profile
 
@@ -10,6 +12,20 @@ Full Stack Developer with a strong focus on frontend technologies.
 I’m currently working in Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). In the last two years I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
 
 My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 4 years and I'm currently collaborating with various local organizations (both public and private).
+
+---
+
+### Education
+
+- **Università degli Studi di Padova**, Master in Computer Science from _Oct 2013 to Sep 2016_
+
+- **Université Pierre et Marie Curie**, Researcher(Thesis) in Software Engineering from _Nov 2015 to Apr 2016_
+
+- **Danmarks Tekniske Universitet (DTU)**, Erasmus student in Software Engineering from _Jan 2014 to May 2014_
+
+- **Università degli Studi di Padova**, Bachelor in Computer science from _Oct 2009 to Jul 2013_
+
+---
 
 ### Experience
 
@@ -30,7 +46,7 @@ Among all the projects I've worked on I want to cite these:
   For the Venice Civic Museums Foundation (MUVE) we built an audioguide mobile application with bluetooth beacons integration, MUVE comprehends 11 of the most important museums in Venice. As the Project Manager I've been involved in the whole development process, from the first functional analysis to the hardware deployment. The solution is composed by a mobile application written in React Native and a dedicated CMS (React and Node.js + Parse Server on top).
 
 - Mediamarket employee evaluation:
-  Mediamarket S.p.A was looking for a digital solution for their employees to evaluate other employee performance and we developed for them a complete custom solution based on their specific needs. It's one of the first projected I worked on and now, after 2 years of production, has thousands of compiled evaluation forms. I developed the web application with React and the backend with Node.js + Parse Server.
+  Mediamarket S.p.A was looking for a digital solution meant to be used by their employees to evaluate other employees performance, we developed for them a complete custom solution based on their specific needs. It's one of the first projected I worked on and now, after 2 years of production, has thousands of compiled evaluation forms. I developed the web application with React and the backend with Node.js + Parse Server.
 
 #### Talentlab aps (Padova, Italy)
 
@@ -92,6 +108,6 @@ At the end of thesis I worked on 3 other small projects:
 
 ---
 
-Andrea Tosatto -- [andreatosatto90@gmail.com](mailto:andreatosatto90@gmail.com)
+Andrea Tosatto -- [andreatosatto90@gmail.com](mailto:andreatosatto90@gmail.com) -- [+393478138908](tel:+393478138908)
 
 ---
