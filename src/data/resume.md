@@ -4,7 +4,7 @@
 
 ##### Teacher at Talentlab, Mentor at Coderdojo Padova
 
-[Download as PDF](https://andtos90.it/resume.pdf) | [Github](https://github.com/andtos90) | [Linkedin](https://www.linkedin.com/in/tosattoandrea) | [Website](https://andtos90.it/)
+[Download as PDF](https://tosat.to/resume.pdf) | [Github](https://github.com/andtos90) | [Linkedin](https://www.linkedin.com/in/tosattoandrea) | [Website](https://tosat.to/)
 
 ### Profile
 

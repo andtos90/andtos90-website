@@ -17,7 +17,7 @@ deploy:
   access_key_id: "AKIAJWFSXIA4WI72NMXQ"
   secret_access_key:
     secure: VchllyyChIiHu2BMxhI761F5AjhUJ3SwNU/HpobJSD/4+S38l/dnQSfMV4k/fke7Ki6FBKgBYl+i4F48SIX4iOv0PoYYl/1Ow2f7XK9DMY/FKqyji3D1veh10Tiz8Ew9kcwuffXep9YVsDeaM32YLcsC4e4ChnMZbAnYtBJgcoNAcgFRytIEzu3ap36EXfcJPORxrarT6zfPGpQvRGPRBilOo+B90JyIxlzGVNa/k40PX6b23Tqt40YiT5tIYelYEVCzXyyX0BQBcyKstmeGeLEgHUpMlJzPp4JrxpXwRQYieI9Hhh/n0REHGS9h6wLeGpDCOd/VBnQpqyMb6pW71hq7gmUgHLfkTjOCWXBUed18V/zW9D2qQOrWqmQqtT8I889TH8b1Cnb5bFP7R1p3l3/oijbddKXNnc8HAs6r0MeSbncSM7TZJ1ulcpMif5w4j6+xcAXtEPv+HsJvmTX8Z6f5l8tlIShkGRjurgJrptcUS/SKEXfVTqkUJIff4URwzkR2jW8G4U963a7wyMuPa454IvbppXK151nJcttj6efngUeLdr0OIXP2nw93m4WW38kXKRP9mKUpEKNdjgDIBJWAF2qq70ht6H68zKYDu74eZdRSQxjiy8+/UazK7oKeB/3qVcUpkMtfXv1meqst9MchU3UOoZ8F41opmeGBdR8=
-  bucket: "andtos90.it"
+  bucket: "tosat.to"
   region: eu-central-1
   skip_cleanup: true
   local_dir: dist
