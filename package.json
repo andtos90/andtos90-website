@@ -8,7 +8,7 @@
     "stage": "react-static build --staging && yarn serve",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "deploy": "react-static build && aws s3 sync dist/ s3://www.andtos90.it",
+    "deploy": "react-static build && aws s3 sync dist/ s3://www.tosat.to",
     "flow": "flow"
   },
   "dependencies": {

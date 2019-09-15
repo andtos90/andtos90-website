@@ -1,8 +1,8 @@
 # Andrea Tosatto
 
-### Software Developer at Mostaza
+### CTO & Software Developer at Mostaza
 
-##### Teacher at Talentlab, Mentor at Coderdojo Padova
+##### Mentor at Coderdojo Padova
 
 [Download as PDF](https://tosat.to/resume.pdf) | [Github](https://github.com/andtos90) | [Linkedin](https://www.linkedin.com/in/tosattoandrea) | [Website](https://tosat.to/)
 
@@ -31,7 +31,18 @@ My second passion is teaching: in my free time I enjoy discussing about the tech
 
 #### Mostaza Srl (Padova, Italy)
 
-##### _Software Developer_ from **Oct 2016 to Now**
+##### _CTO_ from **Oct 2018 to Now**
+
+As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
+
+- I helped the team growth from 2 to 6 developers with a particular attention to make the environment safe and remote working ready
+- Not as much as before but I had still the possibilities to write code and learn new technologies
+- Doing code review and teaching were fundamental to fix ideas and grow as a developer
+- I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects
+
+#### Mostaza Srl (Padova, Italy)
+
+##### _Software Developer_ from **Oct 2016 to Oct 2018**
 
 Web and mobile application development with React and React Native, backend development with Node.js.
 
