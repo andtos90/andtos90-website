@@ -11,7 +11,7 @@ before_script:
 - docker run -v ${PWD}:/resume there4/markdown-resume md2resume pdf ./src/data/resume.md ./public/ --template readable
 
 script:
-- yarn build
+- yarn export
 deploy:
   provider: s3
   access_key_id: "AKIAJWFSXIA4WI72NMXQ"
@@ -20,6 +20,6 @@ deploy:
   bucket: "tosat.to"
   region: eu-central-1
   skip_cleanup: true
-  local_dir: dist
+  local_dir: __saper__/export
   on:
     branch: master
