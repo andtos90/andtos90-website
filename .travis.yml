@@ -20,6 +20,6 @@ deploy:
   bucket: "tosat.to"
   region: eu-central-1
   skip_cleanup: true
-  local_dir: __saper__/export
+  local_dir: __sapper__/export
   on:
     branch: master
