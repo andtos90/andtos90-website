@@ -27,6 +27,10 @@ a {
   color: inherit;
 }
 
+p {
+  margin-block-start: 0em;
+}
+
 code {
   font-family: menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
