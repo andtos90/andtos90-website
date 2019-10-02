@@ -106,7 +106,7 @@ function App() {
               const college = gitgraph.branch("college");
 
               college.commit({
-                subject: "College start",
+                subject: "Beginning of college",
                 dotText: "📚",
                 hash: "102009",
                 onMouseOver: c => setCommit(c),
@@ -219,6 +219,14 @@ function App() {
                 onMessageClick: c => setCommit(c)
               });
 
+              work.commit({
+                subject: "CTO - Mostaza",
+                dotText: "👨‍💻️",
+                hash: "102018",
+                onMouseOver: c => setCommit(c),
+                onMessageClick: c => setCommit(c)
+              });
+
               master.merge({
                 branch: volunteer,
                 fastForward: true,
@@ -254,6 +262,12 @@ function App() {
                 __html: converter.makeHtml(currentExperience.description)
               }}
             ></div>
+            {currentExperience.img && (
+              <img
+                alt={currentExperience.title}
+                src={currentExperience.img}
+              ></img>
+            )}
           </div>
         )}
       </div>

@@ -88,9 +88,9 @@ I developed a tool to test my work and is now used by many developers and can be
 
 ##### _Teacher_ from **Sep 2015 to Sep 2015**
 
-I teached to high school students just graduated in computer science.
+I taught to high school students just graduated in computer science.
 
-The class was divided in 4 parts and I teached 2 of them. The first part main topic was computer networks, in particular the theory of physical layer. The second part was more practical and I introduced different CMS' and we talked about virtualization with Virtual Machines and Docker.
+The class was divided in 4 parts and I taught 2 of them. The first part main topic was computer networks, in particular the theory of physical layer. The second part was more practical and I introduced different CMS' and we talked about virtualization with Virtual Machines and Docker.
 
 The class total length was 64 hours (40 + 24).
 

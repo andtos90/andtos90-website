@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ev
 cd git-resume
-yarn build
-yarn install
+npm install
+npm run build
 mv build ../__sapper__/export/git-resume

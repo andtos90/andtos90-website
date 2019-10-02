@@ -1,6 +1,11 @@
+import dojoImg from "./assets/dojo.jpg";
+import youngMeImg from "./assets/youngMe.jpg";
+import hfarmImg from "./assets/hfarm.jpg";
+import larinGroupImg from "./assets/larinGroup.jpg";
+
 export default {
   "102016": {
-    title: "Mostaza Srl (Padova, Italy)",
+    title: "Mostaza (Padova, Italy)",
     subtitle: "Software Developer",
     from: "Oct 2016",
     to: "Oct 2018",
@@ -52,9 +57,9 @@ At the end of thesis I worked on 3 other small projects:
     from: "Sep 2015",
     to: "Sep 2015",
     description: `
-I teached to high school students just graduated in computer science.
+I taught to high school students just graduated in computer science.
 
-The class was divided in 4 parts and I teached 2 of them. The first part main topic was computer networks, in particular the theory of physical layer. The second part was more practical and I introduced different CMS' and we talked about virtualization with Virtual Machines and Docker.
+The class was divided in 4 parts and I taught 2 of them. The first part main topic was computer networks, in particular the theory of physical layer. The second part was more practical and I introduced different CMS' and we talked about virtualization with Virtual Machines and Docker.
 
 The class total length was 64 hours (40 + 24).`
   },
@@ -78,17 +83,18 @@ Within the Digital Summer Camp 2016 and 2017 I worked in various activities for 
 - Robotics (assembling and programming an mBot robot)
 - Python programming with Minecraft (python scripting to interact with the Minecraft world)
 - Videogames and Virtual Reality (building a simple videogame in Unity 3D with the Google Cardboard SDK)
-    `
+    `,
+    img: hfarmImg
   },
   "092016": {
-    title: "Università degli Studi di Padova",
+    title: "Università degli Studi di Padova (Padova, Italy)",
     subtitle: "Master in Computer Science",
     from: "Oct 2013",
     to: "Sep 2016",
     description: ""
   },
   "012014": {
-    title: "Danmarks Tekniske Universitet (DTU)",
+    title: "Danmarks Tekniske Universitet (Copenaghen, Denmark)",
     subtitle: "Erasmus student in Software Engineering",
     from: "Jan 2014",
     to: "May 2014",
@@ -105,99 +111,53 @@ I’m currently working in Mostaza, a small and vibrant remote-friendly startup 
 
 My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 5 years and I'm currently collaborating with various local organizations (both public and private).`
   },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+  "092014": {
+    title: "Coderdojo Padova (Padova, Italy)",
+    subtitle: "Mentor",
+    from: "Sep 2014",
+    to: "NOW",
+    description: "",
+    img: dojoImg
   },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+  "052012": {
+    title: "Software Developer (Padova, Italy)",
+    subtitle: "Freelancer",
+    from: "May 2012",
+    to: "Jun 2012",
+    description: `I designed and developed a Web application for invoice making (HTML,CSS, jQuery, PHP e MySQL. This experience helped me on how to interact with people without IT knowledge and without a clear needs.
+I still work on this project to add new functionalities to help the client with the new needs.`
   },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+  "072011": {
+    title: "Alì Spa (Padova, Italy)",
+    subtitle: "Intern System Administrator",
+    from: "Jul 2011",
+    to: "Dec 2011",
+    description:
+      "I was a part-time intern and I learnt how to use Active Directory and helped with servers management and remote help-desk."
   },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+  "071990": {
+    title: "Initial commit",
+    subtitle: "A few years later:",
+    description: "",
+    img: youngMeImg
   },
-  "": {
-    title: "",
+  "102009": {
+    title: "Beginning of college",
     subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+    description: "A lot of things happened before but let's start from here!"
   },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
-  },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
-  },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
-  },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
-  },
-  "": {
-    title: "",
-    subtitle: "",
-    from: "",
-    to: "",
-    description: ""
+  "102018": {
+    title: "Mostaza (Padova, Italy)",
+    subtitle: "Chief Technology Officer",
+    from: "Oct 2018",
+    to: "NOW",
+    description: `
+As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
+
+- I helped the team growth from 2 to 6 developers with a particular attention to make the environment safe and remote working ready
+- Not as much as before but I had still the possibilities to write code and learn new technologies
+- Doing code review and teaching were fundamental to fix ideas and grow as a developer
+- I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects`,
+    img: larinGroupImg
   }
 };
-
-// ### Education
-
-// -
-
-// - **Université Pierre et Marie Curie**, Researcher(Thesis) in Software Engineering from _Nov 2015 to Apr 2016_
-
-// -
-
-// - **Università degli Studi di Padova**, Bachelor in Computer science from _Oct 2009 to Jul 2013_
-
-// ---
-
-// ### Experience
-
-// #### Mostaza Srl (Padova, Italy)
-
-// ##### _CTO_ from **Oct 2018 to Now**
-
-// As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
-
-// - I helped the team growth from 2 to 6 developers with a particular attention to make the environment safe and remote working ready
-// - Not as much as before but I had still the possibilities to write code and learn new technologies
-// - Doing code review and teaching were fundamental to fix ideas and grow as a developer
-// - I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects

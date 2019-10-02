@@ -10,13 +10,13 @@ node_js:
 - stable
 
 services:
-  - docker
+- docker
 
 before_script:
 - docker run -v ${PWD}:/resume there4/markdown-resume md2resume pdf ./src/data/resume.md ./public/ --template readable
 
 script:
-- yarn export
+- npm run export
 - ./scripts/deployGitResume.sh
 deploy:
   provider: s3
@@ -27,3 +27,6 @@ deploy:
   region: eu-central-1
   skip_cleanup: true
   local_dir: __sapper__/export
+  on:
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(master|git-resume)$

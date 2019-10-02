@@ -1,7 +1,8 @@
 {
-  "name": "git-resume",
+  "name": "andtos90-git-resume",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tosat.to/git-resume",
   "dependencies": {
     "@gitgraph/react": "^1.5.1",
     "react": "^16.10.1",
