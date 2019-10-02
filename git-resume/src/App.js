@@ -63,12 +63,7 @@ function App() {
         <h1>Andrea Tosatto - Software Developer</h1>
       </div>
       <div className="App">
-        <div
-          style={{
-            overflowY: "auto",
-            minHeight: "180px"
-          }}
-        >
+        <div className="App-Git">
           <Gitgraph
             key={`${isMobile}`}
             options={{
@@ -248,16 +243,7 @@ function App() {
           </Gitgraph>
         </div>
         {currentExperience && (
-          <div
-            style={{
-              display: "flex",
-              flex: 1,
-              minWidth: 0,
-              flexDirection: "column",
-              padding: "0 1em 0 1em",
-              overflowY: "auto"
-            }}
-          >
+          <div className="App-Description">
             <h2>{currentExperience.title}</h2>
             <h3>{currentExperience.subtitle}</h3>
             {currentExperience.from && (

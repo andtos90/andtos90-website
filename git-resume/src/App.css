@@ -9,10 +9,27 @@
   color: #333;
 }
 
+.App-Git {
+  overflow-y: auto;
+}
+
+.App-Description {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  padding: 0 1em 0 1em;
+  overflow-y: auto;
+}
+
 @media (max-width: 700px) {
   .App {
     display: flex;
     flex-direction: column;
     max-width: 100vw;
+    max-height: none;
+  }
+  .App-Git {
+    min-height: 180px;
   }
 }
