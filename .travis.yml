@@ -1,5 +1,10 @@
 sudo: required
 
+branches:
+  only:
+  - master
+  - git-resume
+
 language: node_js
 node_js:
 - stable
@@ -12,6 +17,7 @@ before_script:
 
 script:
 - yarn export
+- ./scripts/deployGitResume.sh
 deploy:
   provider: s3
   access_key_id: "AKIAJWFSXIA4WI72NMXQ"
@@ -21,5 +27,3 @@ deploy:
   region: eu-central-1
   skip_cleanup: true
   local_dir: __sapper__/export
-  on:
-    branch: master
