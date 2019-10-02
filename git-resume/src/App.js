@@ -1,8 +1,4 @@
 import React from "react";
-
-import useWindowSize from "./useWindowSize";
-import data from "./data";
-import "./App.css";
 import {
   Gitgraph,
   Mode,
@@ -10,8 +6,13 @@ import {
   TemplateName,
   Orientation
 } from "@gitgraph/react";
-
 import showdown from "showdown";
+
+import useWindowSize from "./useWindowSize";
+import data from "./data";
+import meImg from "./assets/me.jpg";
+
+import "./App.css";
 
 const converter = new showdown.Converter();
 
@@ -56,10 +57,10 @@ function App() {
   const isMobile = windowSize.width < 700;
   // TODO: memo
   const currentExperience = commit != null ? data[commit.hash] : data["102019"];
-  console.log(createTemplate(isMobile));
   return (
     <div>
-      <div style={{ textAlign: "center" }}>
+      <div className="App-Name">
+        <img src={meImg} alt="Avatar" className="App-Avatar" />
         <h1>Andrea Tosatto - Software Developer</h1>
       </div>
       <div className="App">
