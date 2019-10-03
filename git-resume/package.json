@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://tosat.to/git-resume",
   "dependencies": {
-    "@gitgraph/react": "^1.5.1",
+    "@gitgraph/react": "git://github.com:andtos90/gitgraph.js.git#compiled",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-scripts": "3.1.2",

@@ -1,4 +1,22 @@
-.App {
+.App-Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em 1.5em 1em 1.5em;
+  background-color: white;
+}
+
+.App-Header-Title {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-Header-Title h1 {
+  margin-block-end: 0;
+}
+
+.App-Content {
   display: flex;
   flex-direction: row;
   max-height: 100vh;
@@ -9,24 +27,17 @@
   color: #333;
 }
 
-.App-Name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  padding: 0 1em 0 1em;
-}
-
 .App-Avatar {
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  max-width: 10%;
+  max-height: 10%;
+  height: auto;
+  width: auto;
   border-radius: 50%;
   margin-right: 0.5em;
 }
 
 .App-Git {
-  overflow-y: auto;
 }
 
 .App-Description {
@@ -35,7 +46,6 @@
   min-width: 0;
   flex-direction: column;
   padding: 0 1em 0 1em;
-  overflow-y: auto;
 }
 
 .App-Description img {
@@ -45,15 +55,21 @@
   align-self: center;
 }
 
-@media (max-width: 700px) {
-  .App {
+@media (max-width: 800px) {
+  .App-Content {
     display: flex;
     flex-direction: column;
     max-width: 100vw;
     max-height: none;
   }
+
+  .App-Avatar {
+    max-width: 25%;
+  }
+
   .App-Git {
     min-height: 180px;
+    overflow-y: auto;
   }
 
   .App-Description img {

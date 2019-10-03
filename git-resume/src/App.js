@@ -54,16 +54,19 @@ const createTemplate = isMobile =>
 function App() {
   const [commit, setCommit] = React.useState(null);
   const windowSize = useWindowSize();
-  const isMobile = windowSize.width < 700;
+  const isMobile = windowSize.width < 800;
   // TODO: memo
   const currentExperience = commit != null ? data[commit.hash] : data["102019"];
   return (
     <div>
-      <div className="App-Name">
+      <div className="App-Header">
         <img src={meImg} alt="Avatar" className="App-Avatar" />
-        <h1>Andrea Tosatto - Software Developer</h1>
+        <div className="App-Header-Title">
+          <h1>Andrea Tosatto</h1>
+          <h2>Software Developer</h2>
+        </div>
       </div>
-      <div className="App">
+      <div className="App-Content">
         <div className="App-Git">
           <Gitgraph
             key={`${isMobile}`}
