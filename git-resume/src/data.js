@@ -4,26 +4,32 @@ import hfarmImg from "./assets/hfarm.jpg";
 import larinGroupImg from "./assets/larinGroup.jpg";
 
 export default {
-  "102016": {
-    title: "Mostaza (Padova, Italy)",
-    subtitle: "Software Developer",
-    from: "Oct 2016",
-    to: "Oct 2018",
-    description: `Web and mobile application development with React and React Native, backend development with Node.js.
-
-As a software developer in a small startup I'm constantly facing new challenges not only related to coding but also about project management. I've been part and lead of different remote teams and I daily use most of the common tools to ease the communication and management in this scenario (Slack, Jira, Trello, Bitbucket, Github and so on).
-    
-Among all the projects I've worked on I want to cite these:
-    
-- Emerson Connected:
-It's a complete solution to manage and optimise industrial refrigeration systems with bluetooth connectivity built by Emerson Electric Co. For the React Native mobile application I wrote the native and JS code to communicate over bluetooth with a specific serial protocol. I'm now the lead of the team that is also working on the cloud application (React and a serverless Node.js backend with various Azure services integration)
-
-- MUVE Audioguide:
-For the Venice Civic Museums Foundation (MUVE) we built an audioguide mobile application with bluetooth beacons integration, MUVE comprehends 11 of the most important museums in Venice. As the Project Manager I've been involved in the whole development process, from the first functional analysis to the hardware deployment. The solution is composed by a mobile application written in React Native and a dedicated CMS (React and Node.js + Parse Server on top).
-
-- Mediamarket employee evaluation:
-Mediamarket S.p.A was looking for a digital solution meant to be used by their employees to evaluate other employees performance, we developed for them a complete custom solution based on their specific needs. It's one of the first projected I worked on and now, after 2 years of production, has thousands of compiled evaluation forms. I developed the web application with React and the backend with Node.js + Parse Server.
-    `
+  "071990": {
+    title: "Initial commit",
+    subtitle: "A few years later:",
+    description: "",
+    img: youngMeImg
+  },
+  "102009": {
+    title: "Beginning of college",
+    subtitle: "",
+    description: "A lot of things happened before but let's start from here!"
+  },
+  "072011": {
+    title: "Alì Spa (Padova, Italy)",
+    subtitle: "Intern System Administrator",
+    from: "Jul 2011",
+    to: "Dec 2011",
+    description:
+      "I was a part-time intern and I learnt how to use Active Directory and helped with servers management and remote help-desk."
+  },
+  "052012": {
+    title: "Software Developer (Padova, Italy)",
+    subtitle: "Freelancer",
+    from: "May 2012",
+    to: "Jun 2012",
+    description: `I designed and developed a Web application for invoice making (HTML,CSS, jQuery, PHP e MySQL. This experience helped me on how to interact with people without IT knowledge and without a clear needs.
+I still work on this project to add new functionalities to help the client with the new needs.`
   },
   "102012": {
     title: "QBGROUP Spa (Padova, Italy)",
@@ -40,6 +46,13 @@ At the end of thesis I worked on 3 other small projects:
 2. With the expertise learnt from the controller development I worked to a secondary project about home automation to enhance the clients experience. (Arduino and Python)
 3. An augmented reality application for mobile devices. (Unity 3D and Vuforia)`
   },
+  "012014": {
+    title: "Danmarks Tekniske Universitet (Copenaghen, Denmark)",
+    subtitle: "Erasmus student in Software Engineering",
+    from: "Jan 2014",
+    to: "May 2014",
+    description: ""
+  },
   "072014": {
     title: "Software Developer (Padova, Italy)",
     subtitle: "Freelancer",
@@ -50,6 +63,16 @@ At the end of thesis I worked on 3 other small projects:
   
   1. Magic mirror: look inside yourself trough an LCD screen connected to a Microsoft Kinect V2 sensor (Unity 3D)
   2. Human body layers: some colorful magnifiers that shows the different systems inside a human body (Unity 3D and OpenCV)`
+  },
+  "092014": {
+    title: "Coderdojo (Padova, Italy)",
+    subtitle: "Mentor",
+    from: "Sep 2014",
+    to: "NOW",
+    description: `As a proud mentor of Coderdojo Padova I follow the fundamental [7 rules](https://coderdojomilano.it/tools/7-rules-mentor/) to introduce new technologies to children (and having fun while doing it).
+      
+This experience means a lot for me because most of the thing I learnt in these years were crucial to my growth as a team member.`,
+    img: dojoImg
   },
   "092015": {
     title: "IFOA (Padova, Italy)",
@@ -93,12 +116,40 @@ Within the Digital Summer Camp 2016 and 2017 I worked in various activities for 
     to: "Sep 2016",
     description: ""
   },
-  "012014": {
-    title: "Danmarks Tekniske Universitet (Copenaghen, Denmark)",
-    subtitle: "Erasmus student in Software Engineering",
-    from: "Jan 2014",
-    to: "May 2014",
-    description: ""
+  "102016": {
+    title: "Mostaza (Padova, Italy)",
+    subtitle: "Software Developer",
+    from: "Oct 2016",
+    to: "Oct 2018",
+    description: `Web and mobile application development with React and React Native, backend development with Node.js.
+
+As a software developer in a small startup I'm constantly facing new challenges not only related to coding but also about project management. I've been part and lead of different remote teams and I daily use most of the common tools to ease the communication and management in this scenario (Slack, Jira, Trello, Bitbucket, Github and so on).
+    
+Among all the projects I've worked on I want to cite these:
+    
+- Emerson Connected:
+It's a complete solution to manage and optimise industrial refrigeration systems with bluetooth connectivity built by Emerson Electric Co. For the React Native mobile application I wrote the native and JS code to communicate over bluetooth with a specific serial protocol. I'm now the lead of the team that is also working on the cloud application (React and a serverless Node.js backend with various Azure services integration)
+
+- MUVE Audioguide:
+For the Venice Civic Museums Foundation (MUVE) we built an audioguide mobile application with bluetooth beacons integration, MUVE comprehends 11 of the most important museums in Venice. As the Project Manager I've been involved in the whole development process, from the first functional analysis to the hardware deployment. The solution is composed by a mobile application written in React Native and a dedicated CMS (React and Node.js + Parse Server on top).
+
+- Mediamarket employee evaluation:
+Mediamarket S.p.A was looking for a digital solution meant to be used by their employees to evaluate other employees performance, we developed for them a complete custom solution based on their specific needs. It's one of the first projected I worked on and now, after 2 years of production, has thousands of compiled evaluation forms. I developed the web application with React and the backend with Node.js + Parse Server.
+    `
+  },
+  "102018": {
+    title: "Mostaza (Padova, Italy)",
+    subtitle: "Chief Technology Officer",
+    from: "Oct 2018",
+    to: "NOW",
+    description: `
+As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
+
+- I helped the team growth from 2 to 6 developers with a particular attention to make the environment safe and remote working ready
+- Not as much as before but I had still the possibilities to write code and learn new technologies
+- Doing code review and teaching were fundamental to fix ideas and grow as a developer
+- I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects`,
+    img: larinGroupImg
   },
   "102019": {
     title: "CTO & Software Developer at Mostaza",
@@ -118,54 +169,5 @@ React, Mobx, Redux, React Native, HTML, CSS, Node.js, AWS, Microsoft Azure, Bitb
 
 #### Past experience with:
 PHP, Python, Java, C++ , Qt framework, Unity 3D, MySQL`
-  },
-  "092014": {
-    title: "Coderdojo Padova (Padova, Italy)",
-    subtitle: "Mentor",
-    from: "Sep 2014",
-    to: "NOW",
-    description: "",
-    img: dojoImg
-  },
-  "052012": {
-    title: "Software Developer (Padova, Italy)",
-    subtitle: "Freelancer",
-    from: "May 2012",
-    to: "Jun 2012",
-    description: `I designed and developed a Web application for invoice making (HTML,CSS, jQuery, PHP e MySQL. This experience helped me on how to interact with people without IT knowledge and without a clear needs.
-I still work on this project to add new functionalities to help the client with the new needs.`
-  },
-  "072011": {
-    title: "Alì Spa (Padova, Italy)",
-    subtitle: "Intern System Administrator",
-    from: "Jul 2011",
-    to: "Dec 2011",
-    description:
-      "I was a part-time intern and I learnt how to use Active Directory and helped with servers management and remote help-desk."
-  },
-  "071990": {
-    title: "Initial commit",
-    subtitle: "A few years later:",
-    description: "",
-    img: youngMeImg
-  },
-  "102009": {
-    title: "Beginning of college",
-    subtitle: "",
-    description: "A lot of things happened before but let's start from here!"
-  },
-  "102018": {
-    title: "Mostaza (Padova, Italy)",
-    subtitle: "Chief Technology Officer",
-    from: "Oct 2018",
-    to: "NOW",
-    description: `
-As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
-
-- I helped the team growth from 2 to 6 developers with a particular attention to make the environment safe and remote working ready
-- Not as much as before but I had still the possibilities to write code and learn new technologies
-- Doing code review and teaching were fundamental to fix ideas and grow as a developer
-- I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects`,
-    img: larinGroupImg
   }
 };

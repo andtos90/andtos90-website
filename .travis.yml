@@ -13,7 +13,7 @@ services:
 - docker
 
 before_script:
-- docker run -v ${PWD}:/resume there4/markdown-resume md2resume pdf ./src/data/resume.md ./public/ --template readable
+- docker run -v ${PWD}:/resume there4/markdown-resume md2resume pdf ./src/data/resume.md ./static/ --template readable
 
 script:
 - npm run export

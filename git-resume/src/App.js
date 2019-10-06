@@ -16,14 +16,9 @@ import "./App.css";
 
 const converter = new showdown.Converter();
 
-const branchesOrder = [
-  "master",
-  "volunteer",
-  "college",
-  "erasmus",
-  "thesis",
-  "work"
-];
+const MOBILE_SCREEN_MAX_WIDTH = 800;
+
+const branchesOrder = ["master", "volunteer", "work"];
 const compareBranchesOrder = (a, b) => {
   return branchesOrder.indexOf(a) - branchesOrder.indexOf(b);
 };
@@ -52,11 +47,13 @@ const createTemplate = isMobile =>
   });
 
 function App() {
-  const [commit, setCommit] = React.useState(null);
+  const [currentCommit, setCurrentCommit] = React.useState(null);
   const windowSize = useWindowSize();
-  const isMobile = windowSize.width < 800;
-  // TODO: memo
-  const currentExperience = commit != null ? data[commit.hash] : data["102019"];
+  const isMobile = windowSize.width < MOBILE_SCREEN_MAX_WIDTH;
+  const currentExperience = React.useMemo(
+    () => (currentCommit != null ? data[currentCommit.hash] : data["102019"]),
+    [currentCommit]
+  );
   return (
     <div>
       <div className="App-Header">
@@ -81,154 +78,125 @@ function App() {
             }}
           >
             {gitgraph => {
-              // Simulate git commands with Gitgraph API.
               const master = gitgraph.branch("master");
               master.commit({
                 author: "My Parents",
                 subject: "Initial commit",
                 dotText: "👶",
                 hash: "071990",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
 
               const work = gitgraph.branch({
                 name: "work"
-                /*style: { color: "#C74939" },
-            commitDefaultOptions: {
-              style: {
-                message: {
-                  color: "#C74939"
-                },
-                dot: {
-                  color: "#C74939"
-                }
-              }
-            }*/
               });
 
-              const college = gitgraph.branch("college");
-
-              college.commit({
+              master.commit({
                 subject: "Beginning of college",
                 dotText: "📚",
                 hash: "102009",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
               work.commit({
                 subject: "System administrator - Alì S.p.A.",
                 dotText: "🖥️",
 
                 hash: "072011",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
               work.commit({
                 subject: "Software Developer - Freelancer",
                 dotText: "📈",
                 hash: "052012",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
               work.commit({
                 subject: "Software Developer - QBGroup",
                 dotText: "🕹️",
                 hash: "102012",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
+              });
+              master.commit({
+                subject: "Bachelor degree",
+                dotText: "🎓",
+                hash: "082013",
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
+              });
+              master.commit({
+                subject: "Erasmus - DTU",
+                dotText: "🇩🇰",
+                hash: "012014",
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
               work.commit({
                 subject: "Software Developer - Freelancer",
                 dotText: "🔍",
                 hash: "072014",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
-              college.commit({
-                subject: "Bachelor degree",
-                dotText: "🎓",
-                hash: "082014",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+              const volunteer = gitgraph.branch({
+                name: "volunteer",
+                from: master
               });
-              const volunteer = gitgraph.branch("volunteer");
               volunteer.commit({
                 subject: "Coderdojo",
                 dotText: "🥋",
                 hash: "092014",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
               work.commit({
                 subject: "Teacher - IFOA",
                 dotText: "👨‍🏫️",
                 hash: "092015",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
 
-              const erasmus = gitgraph.branch({
-                name: "erasmus",
-                from: college
+              master.commit({
+                subject: "Thesis - Paris",
+                dotText: "🇫🇷",
+                hash: "112015",
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
-              erasmus.commit({
-                subject: "Erasmus - DTU",
-                dotText: "🇩🇰",
-                hash: "012014",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
-              });
-              college.merge({ branch: erasmus, fastForward: true });
               work.commit({
                 subject: "Teacher - H-Farm Education",
                 dotText: "👨‍🏫️",
                 hash: "072016",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
-              const thesis = gitgraph.branch({ name: "thesis", from: college });
-              thesis.commit({
-                subject: "Thesis - Paris",
-                dotText: "🇫🇷",
-                hash: "112015",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
-              });
-              college.merge({
-                branch: "thesis",
-                commitOptions: {
-                  subject: "Master degree",
-                  dotText: "🎓",
-                  onMouseOver: c => setCommit(c),
-                  onMessageClick: c => setCommit(c)
-                },
-                fastForward: true
-              });
-              college.commit({
+              master.commit({
                 subject: "Master degree",
                 dotText: "🎓",
                 hash: "092016",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
-
-              master.merge({ branch: college, fastForward: true, commit: {} });
 
               work.commit({
                 subject: "Software developer - Mostaza",
                 dotText: "📲",
                 hash: "102016",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
 
               work.commit({
                 subject: "CTO - Mostaza",
                 dotText: "👨‍💻️",
                 hash: "102018",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
               });
 
               master.merge({
@@ -237,20 +205,10 @@ function App() {
                 commitOptions: {
                   subject: "NOW",
                   hash: "102019",
-                  onMouseOver: c => setCommit(c),
-                  onMessageClick: c => setCommit(c)
+                  onMouseOver: c => setCurrentCommit(c),
+                  onMessageClick: c => setCurrentCommit(c)
                 }
-              }); /*
-            master.merge({
-              branch: work,
-              fastForward: true,
-              commitOptions: {
-                subject: "Current",
-                hash: "NOW",
-                onMouseOver: c => setCommit(c),
-                onMessageClick: c => setCommit(c)
-              }
-            }); */
+              });
             }}
           </Gitgraph>
         </div>
