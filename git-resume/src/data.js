@@ -109,7 +109,15 @@ Within the Digital Summer Camp 2016 and 2017 I worked in various activities for 
 Full Stack Developer with a strong focus on frontend technologies.
 I’m currently working in Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). In the last three years I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
 
-My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 5 years and I'm currently collaborating with various local organizations (both public and private).`
+My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 5 years and I'm currently collaborating with various local organizations (both public and private).
+
+### Technologies
+
+#### Currently working with:
+React, Mobx, Redux, React Native, HTML, CSS, Node.js, AWS, Microsoft Azure, Bitbucket Pipelines, Postgres
+
+#### Past experience with:
+PHP, Python, Java, C++ , Qt framework, Unity 3D, MySQL`
   },
   "092014": {
     title: "Coderdojo Padova (Padova, Italy)",
