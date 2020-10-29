@@ -1,6 +1,6 @@
 # Andrea Tosatto
 
-### CTO & Software Developer at Mostaza
+### Senior software engineer at Tes
 
 ##### Mentor at Coderdojo Padova
 
@@ -8,10 +8,10 @@
 
 ### Profile
 
-Full Stack Developer with a strong focus on frontend technologies.
-I’m currently working in Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). In the last three years I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
+Full Stack Developer with a strong focus on frontend technologies currently working at Tes.
+I worked at Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). During my experience at Tes and Mostaza I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
 
-My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 5 years and I'm currently collaborating with various local organizations (both public and private).
+My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 4 years and I'm currently collaborating with various local organizations (both public and private).
 
 ---
 
