@@ -41,9 +41,19 @@ PHP, Python, Java, C++ , Qt framework, Unity 3D, MySQL
 
 ### Experience
 
+#### Tes (Remote - London, UK)
+
+##### _Senior software engineer_ from **Jan 2020 to Now**
+
+I worked on a new internal tool to book and review teaching job ad. We built a complete new infrastructure from scratch with Event Sourcing(ES) and Command Query Responsibility Segregation (CQRS).
+
+My main contribution has been on development of the front-end (React, Redux) where I've introduced new concept not commonly used in the company, for example React Hooks, stale while revalidate fetching (with SWR) and End to End testing with Cypress.
+
+I've also vertically developed various features where I've worked in our back-end (Node, Express, PostgreSQL) and I've learned a lot about ES/CQRS.
+
 #### Mostaza Srl (Padova, Italy)
 
-##### _CTO_ from **Oct 2018 to Now**
+##### _CTO_ from **Oct 2018 to Dec 2020**
 
 As CTO of Mostaza I had the opportunity to grow not only my skill as software developer but also to improve my attitude as team manager. I also had the opportunity to talk directly with our customers and teach the technology we use every day to other companies and developers. The key points of my experience were:
 

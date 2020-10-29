@@ -199,12 +199,20 @@ function App() {
                 onMessageClick: c => setCurrentCommit(c)
               });
 
+              work.commit({
+                subject: "Senior software engineer - Tes",
+                dotText: "👨‍💻️",
+                hash: "012020",
+                onMouseOver: c => setCurrentCommit(c),
+                onMessageClick: c => setCurrentCommit(c)
+              });
+
               master.merge({
                 branch: volunteer,
                 fastForward: true,
                 commitOptions: {
                   subject: "NOW",
-                  hash: "102019",
+                  hash: "112020",
                   onMouseOver: c => setCurrentCommit(c),
                   onMessageClick: c => setCurrentCommit(c)
                 }

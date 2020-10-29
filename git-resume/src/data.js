@@ -151,16 +151,28 @@ As CTO of Mostaza I had the opportunity to grow not only my skill as software de
 - I spoke directly to customers (mainly B2B) from the first contacts to the end of the projects`,
     img: larinGroupImg
   },
-  "102019": {
-    title: "CTO & Software Developer at Mostaza",
+  "012020": {
+    title: "Tes (Remote - London, UK)",
+    subtitle: "Senior software engineer",
+    from: "Jan 2020",
+    to: "NOW",
+    description: `
+I worked on a new internal tool to book and review teaching job ad. We built a complete new infrastructure from scratch with Event Sourcing(ES) and Command Query Responsibility Segregation (CQRS).
+
+My main contribution has been on development of the front-end (React, Redux) where I've introduced new concept not commonly used in the company, for example React Hooks, stale while revalidate fetching (with SWR) and End to End testing with Cypress.
+
+I've also vertically developed various features where I've worked in our back-end (Node, Express, PostgreSQL) and I've learned a lot about ES/CQRS.`
+  },
+  "112020": {
+    title: "Senior Software Engineer at Tes",
     subtitle: "Mentor at Coderdojo Padova",
     description: `
 [Download as PDF](https://tosat.to/resume.pdf) | [Github](https://github.com/andtos90) | [Linkedin](https://linkedin.com/in/tosattoandrea/en) | [Website](https://tosat.to/)
 
-Full Stack Developer with a strong focus on frontend technologies.
-I’m currently working in Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). In the last three years I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
+Full Stack Developer with a strong focus on frontend technologies currently working at Tes.
+I worked at Mostaza, a small and vibrant remote-friendly startup based in Padua (IT). During my exprience at Mostaza I improved my React and React Native skills and I’m happy to use them every day to build new projects and teach what I learned to other people and companies.
 
-My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 5 years and I'm currently collaborating with various local organizations (both public and private).
+My second passion is teaching: in my free time I enjoy discussing about the techs I know and love. I've been a mentor of Coderdojo Padova for more than 4 years and I'm currently collaborating with various local organizations (both public and private). 
 
 ### Technologies
 
